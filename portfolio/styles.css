@@ -107,7 +107,6 @@ button,
   cursor: pointer;
   font-weight: 500;
   transition: all 0.3s ease;
-  display: flex;
   font-family: "Poppins", sans-serif;
 }
 
@@ -115,7 +114,53 @@ button:hover,
 .btn:hover {
   background-color: var(--text-primary);
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(219, 17, 17, 0.1);
+}
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap; /* Allows buttons to wrap */
+  justify-content: center; /* Centers buttons */
+  gap: 10px; /* Adds spacing between buttons */
+  width: 100%;
+}
+
+button,
+.btn {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  white-space: nowrap; /* Prevents text from breaking */
+  max-width: 100%; /* Prevents overflow */
+}
+
+button:hover,
+.btn:hover {
+  background-color: var(--text-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(219, 17, 17, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .cta-buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+    width: 100%;
+  }
+
+  .cta-buttons button,
+  .cta-buttons .btn {
+    width: 80%; /* Adjust width */
+    padding: 0.5rem 1rem; /* Adjust padding */
+    font-size: 1rem; /* Adjust font size */
+  }
 }
 
 .text-center {
