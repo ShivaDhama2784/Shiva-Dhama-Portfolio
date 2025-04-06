@@ -513,6 +513,12 @@ nav {
   opacity: 1;
   transform: translateY(0);
 }
+@media (max-width: 768px) {
+  .project-card {
+    flex: 0 0 100%;  /* Each card takes full width on small screens */
+    max-width: 100%;
+  }
+}
 
 .project-card:hover {
   transform: translateY(-8px);
