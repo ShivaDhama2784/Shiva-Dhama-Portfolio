@@ -514,11 +514,18 @@ nav {
   transform: translateY(0);
 }
 @media (max-width: 768px) {
+  .project-grid {
+    display: block; /* or flex with column direction */
+    align-items: center;
+  }
+
   .project-card {
-    flex: 0 0 100%;  /* Each card takes full width on small screens */
     max-width: 100%;
+    width: 100%;
+    margin-bottom: 1.5rem; /* add spacing between cards */
   }
 }
+
 
 .project-card:hover {
   transform: translateY(-8px);
